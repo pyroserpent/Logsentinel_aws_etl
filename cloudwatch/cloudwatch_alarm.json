@@ -1,0 +1,15 @@
+{
+    "AlarmName": "LogSentinel-Error-Alarm",
+    "AlarmDescription": "Triggers when error logs exceed threshold",
+    "ActionsEnabled": true,
+    "AlarmActions": [
+        "arn:aws:sns:your-region:your-account-id:logsentinel-alerts"
+    ],
+    "MetricName": "ErrorCount",
+    "Namespace": "LogSentinel",
+    "Statistic": "Sum",
+    "Period": 300,
+    "EvaluationPeriods": 1,
+    "Threshold": 5,
+    "ComparisonOperator": "GreaterThanThreshold"
+}
